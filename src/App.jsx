@@ -2,7 +2,7 @@ import React from 'react'
 
 function App() {
   return (
-    <div>Vite installed Successfully..</div>
+    <div className='bg-red-500'>Vite installed Successfully..</div>
   )
 }
 
