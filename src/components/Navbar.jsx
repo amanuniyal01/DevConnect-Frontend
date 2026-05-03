@@ -3,12 +3,13 @@ import React from 'react'
 function Navbar() {
     return (
         <div data-theme="autumn" className="navbar bg-base-100 shadow-lg">
+            <img className='h-10' src="https://devconnect.uk/assets/DC_Logo--0ebJzRZ.svg"/>
             <div className="flex-1">
             </div>
             <div className="flex gap-2">
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
+                        <div className="w-10 rounded-lg">
                             <img
                                 alt="Tailwind CSS Navbar component"
                                 src="https://static.vecteezy.com/system/resources/previews/029/711/176/non_2x/developer-with-ai-generated-free-png.png" />
