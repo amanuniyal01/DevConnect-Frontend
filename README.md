@@ -3,7 +3,11 @@
 A developer networking platform built with modern frontend technologies.
 
 ---
+*Features
 * Added Logo For DevConnect.
+* Responsive Navbar And Footer.
+* Landing Page
+
 ## 🛠️ Tech Stack
 
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
