@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Router, Routes } from 'react-router'
 import Body from './components/Body'
 import Login from './components/Login'
-import Profile from './components/profile'
+import Profile from './components/Profile'
 import { Route } from 'react-router'
 
 function App() {
