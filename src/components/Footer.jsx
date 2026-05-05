@@ -22,13 +22,13 @@ function Footer() {
                 <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
 
                    
-                    <a href="https://github.com/amanuniyal01" target="_blank" rel="noopener noreferrer">
+                    <a  href="https://github.com/amanuniyal01" target="_blank" rel="noopener noreferrer">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
                             height="24"
                             viewBox="0 0 24 24"
-                            className="fill-current">
+                            className="fill-current hover:bg-gray-800">
                             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 
                             0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756
                             -1.089-.744.082-.729.082-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 
@@ -46,12 +46,12 @@ function Footer() {
 
                    
                     <a href="https://www.linkedin.com/in/amanuniyal1012/" target="_blank" rel="noopener noreferrer">
-                        <svg
+                        <svg 
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
                             height="24"
                             viewBox="0 0 24 24"
-                            className="fill-current">
+                            className="fill-current hover:bg-gray-800">
                             <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 
                             24h20.46c.98 0 1.77-.77 
                             1.77-1.72V1.72C24 .77 23.21 0 22.23 
