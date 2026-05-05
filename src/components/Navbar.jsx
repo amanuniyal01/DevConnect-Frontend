@@ -3,8 +3,8 @@ import React from 'react'
 function Navbar() {
     return (
         <div
-            data-theme="autumn"
-            className="navbar bg-base-50 shadow-lg fixed top-0 left-0 w-full z-50"
+        
+            className="navbar bg-blue-100/70  shadow-lg fixed top-0 left-0 w-full z-50"
         >
             <img
                 className='h-10'

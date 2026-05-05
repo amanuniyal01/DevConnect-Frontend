@@ -5,7 +5,7 @@ import Footer from './Footer'
 
 function Body() {
     return (
-        <div className=''>
+        <div className='bg-blue-100'>
             <Navbar />
             <Outlet />
             <Footer/>
