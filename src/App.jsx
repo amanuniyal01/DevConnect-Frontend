@@ -1,10 +1,24 @@
 import React from 'react'
-import Navbar from './components/Navbar'
+import { BrowserRouter, Router, Routes } from 'react-router'
+import Body from './components/Body'
+import Login from './components/Login'
+import Profile from './components/profile'
+import { Route } from 'react-router'
 
 function App() {
   return (
     <div className="p-10">
-      <Navbar />
+      <BrowserRouter >
+        <Routes>
+          <Route path="/" element={<Body/>} >
+            <Route path="/login" element={<Login/>} />
+            <Route path="/profile" element={<Profile/>} />
+            <Route />
+
+          </Route>
+        </Routes>
+      </BrowserRouter>
+
 
 
 

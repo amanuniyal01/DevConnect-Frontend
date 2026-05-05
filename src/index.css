@@ -1,3 +1,7 @@
+* {
+    padding: 0;
+}
+
 @import "tailwindcss";
 @import "/node_modules/daisyui/themes.css";
 @import "daisyui/daisyui.css"
