@@ -1,12 +1,14 @@
 import React from 'react'
-import Navbar from './navbar'
+import Navbar from './Navbar'
 import { Outlet } from 'react-router'
+import Footer from './Footer'
 
 function Body() {
     return (
         <div className=''>
             <Navbar />
             <Outlet />
+            <Footer/>
         </div>
     )
 }
