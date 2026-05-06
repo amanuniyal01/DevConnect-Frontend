@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
     return (
         <div>
-            <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content fixed bottom-0 items-center p-4">
+            <footer className="footer flex justify-between  w-full sm:footer-horizontal bg-neutral text-neutral-content fixed bottom-0 items-center  md:p-4">
                 <aside className="grid-flow-col items-center">
                     <svg
                         width="36"
@@ -19,7 +19,7 @@ function Footer() {
                     <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
                 </aside>
 
-                <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+                <nav className="grid-flow-col gap-2 md:gap-4 md:place-self-center  md:justify-self-end">
 
                    
                     <a  href="https://github.com/amanuniyal01" target="_blank" rel="noopener noreferrer">
