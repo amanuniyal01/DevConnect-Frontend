@@ -1,7 +1,14 @@
 * {
     padding: 0;
 }
-
+.landing{
+    background: url("./assets/landing.svg");
+    opacity:80%;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:contain;
+   
+}
 
 @import "tailwindcss";
 @import "/node_modules/daisyui/themes.css";
