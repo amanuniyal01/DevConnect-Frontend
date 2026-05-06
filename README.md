@@ -6,7 +6,7 @@ A developer networking platform built with modern frontend technologies.
 *Features
 * Added Logo For DevConnect.
 * Responsive Navbar And Footer.
-* Landing Page
+* Landing Page (With Footer and Nabar)
 
 ## 🛠️ Tech Stack
 
