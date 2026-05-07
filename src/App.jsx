@@ -8,7 +8,7 @@ import Landing from './components/Landing'
 
 function App() {
   return (
-    <div className="p-10">
+    <div className="">
       <BrowserRouter >
         <Routes>
           <Route path="/" element={<Landing />} />

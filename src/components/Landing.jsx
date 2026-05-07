@@ -7,11 +7,11 @@ function Landing() {
     const navigate = useNavigate();
 
     return (
-        <div className="flex flex-col min-h-screen bg-blue-50">
+        <div className="flex flex-col min-h-screen   bg-blue-50">
 
             <Navbar />
 
-            <div className="flex flex-col md:flex-row items-center justify-center flex-1 overflow-hidden">
+            <div className="flex flex-col md:flex-row items-center justify-center md:justify-between flex-1 overflow-hidden">
 
                 <div className="landing w-full h-64 sm:h-80 md:w-1/2 flex items-center justify-center" />
 
