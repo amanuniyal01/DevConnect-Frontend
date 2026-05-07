@@ -1,12 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 
 function Navbar() {
+    const navigate=useNavigate()
     return (
         <nav className="navbar bg-blue-100/70 shadow-lg fixed top-0 left-0 w-full z-50 px-4 md:px-8">
 
            
-            <div className="flex-1">
+            <div onClick={()=>navigate("/")}  className=" cursor-pointer flex-1 ">
                 <img
+               
                     className="h-8 sm:h-10"
                     src="https://devconnect.uk/assets/DC_Logo--0ebJzRZ.svg"
                     alt="DevConnect logo"
@@ -14,13 +17,6 @@ function Navbar() {
             </div>
 
             <div className="flex items-center gap-2 sm:gap-4">
-
- 
-                <div className="hidden sm:flex items-center gap-4 text-sm font-medium text-slate-600">
-                    <a href="#" className="hover:text-blue-500 transition-colors">Home</a>
-                    <a href="#" className="hover:text-blue-500 transition-colors">Explore</a>
-                    <a href="#" className="hover:text-blue-500 transition-colors">About</a>
-                </div>
 
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
