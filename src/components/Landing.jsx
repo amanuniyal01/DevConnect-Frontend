@@ -13,7 +13,7 @@ function Landing() {
 
             <div className="flex flex-col md:flex-row items-center justify-center md:justify-between flex-1 overflow-hidden">
 
-                <div className="landing w-full h-64 sm:h-80 md:w-1/2 flex items-center justify-center" />
+                <div className="landing w-full h-50 md:h-90  sm:h-80 md:w-1/2 flex items-center justify-center" />
 
                 <div className="w-full md:w-1/2 flex flex-col items-center md:items-start gap-5 px-8 pb-12 md:py-0 md:pr-16">
 
