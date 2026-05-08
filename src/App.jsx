@@ -5,21 +5,26 @@ import Login from './components/Login'
 import Profile from './components/Profile'
 import { Route } from 'react-router'
 import Landing from './components/Landing'
+import { RouterContextProvider } from 'react-router'
+import { Provider } from 'react-redux'
+import appStore from './utils/appStore'
 
 function App() {
   return (
-    <div className="">
-      <BrowserRouter >
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/app" element={<Body />} >
-            <Route path="login" element={<Login />} />
-            <Route path="profile" element={<Profile />} />
-            <Route />
+    <div >
+      <Provider store={appStore}>
+        <BrowserRouter >
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/app" element={<Body />} >
+              <Route path="login" element={<Login />} />
+              <Route path="profile" element={<Profile />} />
+              <Route />
 
-          </Route>
-        </Routes>
-      </BrowserRouter>
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </Provider>
 
 
 
