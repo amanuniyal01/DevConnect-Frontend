@@ -4,18 +4,20 @@ import loginImage from "../assets/landing.svg"
 import axios from 'axios'
 
 function Login() {
-    const [email, setEmail] = useState("shubham@gmail.com");
-    const [password, setPassword] = useState("shubhamA@123");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const handleSubmit = async () => {
-      try{
-          const result = await axios.post("http://localhost:3000/login", {
-            email, password
-        });
-      }
-      catch(err){
-        console.log(err)
+        try {
+            const result = await axios.post("http://localhost:3000/login", {
+                email, password
+            }, {
+                withCredentials: true,
+            });
+        }
+        catch (err) {
+            console.log(err)
 
-      }
+        }
 
 
     }

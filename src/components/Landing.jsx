@@ -40,7 +40,7 @@ function Landing() {
                     </div>
 
                     <button
-                        onClick={() => navigate("/app")}
+                        onClick={() => navigate("/app/login")}
                         className="btn bg-blue-500 hover:bg-blue-600 text-white w-56 rounded-xl shadow-md shadow-blue-200"
                     >
                         Let's Connect →
