@@ -4,10 +4,18 @@ import loginImage from "../assets/landing.svg"
 import axios from 'axios'
 
 function Login() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("shubham@gmail.com");
+    const [password, setPassword] = useState("shubhamA@123");
     const handleSubmit = async () => {
-        const result = await axios.get("http://localhost:3000/login");
+      try{
+          const result = await axios.post("http://localhost:3000/login", {
+            email, password
+        });
+      }
+      catch(err){
+        console.log(err)
+
+      }
 
 
     }
@@ -58,7 +66,7 @@ function Login() {
                                 <input
                                     type="email"
                                     value={email}
-                                    onChange={(e)=>setEmail(email.target.value)}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     placeholder="you@example.com"
                                     className="bg-transparent outline-none text-sm w-full text-slate-700 placeholder-slate-400"
                                 />
@@ -84,7 +92,7 @@ function Login() {
                                 <input
                                     type="password"
                                     value={password}
-                                    onChange={(e)=>setPassword(e.target.value)}
+                                    onChange={(e) => setPassword(e.target.value)}
                                     placeholder="••••••••"
                                     className="bg-transparent outline-none text-sm w-full text-slate-700 placeholder-slate-400"
                                 />
