@@ -1,7 +1,10 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router'
 
 function Navbar() {
+    const user=useSelector((store)=>store.user)
+    console.log(user)
     const navigate=useNavigate()
     return (
         <nav className="navbar bg-blue-100/70 shadow-lg fixed top-0 left-0 w-full z-50 px-4 md:px-8">

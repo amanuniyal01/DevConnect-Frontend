@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router'
 import loginImage from "../assets/landing.svg"
 import axios from 'axios'
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { useNavigate } from 'react-router';
 
 function Login() {
     const [email, setEmail] = useState("shubham@gmail.com");
     const [password, setPassword] = useState("shubhamA@123");
     const dispatch = useDispatch()
+    const navigate=useNavigate()
     const handleSubmit = async () => {
         try {
             const result = await axios.post("http://localhost:3000/login", {
@@ -17,10 +18,10 @@ function Login() {
                 withCredentials: true,
             });
             dispatch(addUser(result.data))
+            // navigate("/app")
         }
         catch (err) {
             console.log(err)
-
         }
 
 
