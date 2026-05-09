@@ -6,8 +6,8 @@ import { addUser } from '../utils/userSlice';
 import { useNavigate } from 'react-router';
 
 function Login() {
-    const [email, setEmail] = useState("shubham@gmail.com");
-    const [password, setPassword] = useState("shubhamA@123");
+    const [email, setEmail] = useState("aman@gmail.com");
+    const [password, setPassword] = useState("amanA@123");
     const dispatch = useDispatch()
     const navigate=useNavigate()
     const handleSubmit = async () => {
@@ -18,7 +18,7 @@ function Login() {
                 withCredentials: true,
             });
             dispatch(addUser(result.data))
-            // navigate("/app")
+            navigate("/app")
         }
         catch (err) {
             console.log(err)

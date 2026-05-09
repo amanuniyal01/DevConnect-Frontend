@@ -22,7 +22,7 @@ function Navbar() {
             {user && (
                 <div className="flex items-center gap-2 sm:gap-4">
 
-                  
+
                     <div className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-bold">
                         {user?.firstName?.charAt(0)?.toUpperCase()}
                     </div>
@@ -31,10 +31,10 @@ function Navbar() {
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                             <div className="w-9 sm:w-10 rounded-full overflow-hidden">
                                 <img
-                                    alt="User avatar"
-                                    src={user?.photoUrl || "https://via.placeholder.com/150"}
+                                    src={user?.photoUrl || "https://png.pngtree.com/png-vector/20231019/ourmid/pngtree-user-profile-avatar-png-image_10211467.png"}
                                     onError={(e) => {
-                                        e.target.src = "https://via.placeholder.com/150";
+                                        e.target.onerror = null; 
+                                        e.target.src = "https://png.pngtree.com/png-vector/20231019/ourmid/pngtree-user-profile-avatar-png-image_10211467.png";
                                     }}
                                 />
                             </div>
