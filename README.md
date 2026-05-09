@@ -79,7 +79,4 @@ devConnect-Frontend/
 
 ---
 
-## 🔗 Links
 
-* 📁 GitHub Repo: [link]
-* 🌐 Live Link: [link]
