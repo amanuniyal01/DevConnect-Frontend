@@ -8,6 +8,7 @@ import Landing from './components/Landing'
 import { RouterContextProvider } from 'react-router'
 import { Provider } from 'react-redux'
 import appStore from './utils/appStore'
+import Feed from './components/Feed'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/app" element={<Body />} >
+              <Route path="feed" element={<Feed />} />
               <Route path="login" element={<Login />} />
               <Route path="profile" element={<Profile />} />
               <Route />

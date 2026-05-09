@@ -18,7 +18,7 @@ function Login() {
                 withCredentials: true,
             });
             dispatch(addUser(result.data))
-            navigate("/app")
+            navigate("/app/feed")
         }
         catch (err) {
             console.log(err)
