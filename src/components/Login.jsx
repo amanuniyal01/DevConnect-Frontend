@@ -2,10 +2,13 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
 import loginImage from "../assets/landing.svg"
 import axios from 'axios'
+import { useDispatch } from 'react-redux';
+import { addUser } from '../utils/userSlice';
 
 function Login() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("shubham@gmail.com");
+    const [password, setPassword] = useState("shubhamA@123");
+    const dispatch = useDispatch()
     const handleSubmit = async () => {
         try {
             const result = await axios.post("http://localhost:3000/login", {
@@ -13,6 +16,7 @@ function Login() {
             }, {
                 withCredentials: true,
             });
+            dispatch(addUser(result.data))
         }
         catch (err) {
             console.log(err)
