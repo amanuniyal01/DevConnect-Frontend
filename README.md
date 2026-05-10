@@ -9,6 +9,7 @@ A developer networking platform built with modern frontend technologies.
 * Added Logo for DevConnect
 * Responsive Navbar and Footer
 * Landing Page (with Footer and Navbar)
+* Login Authentication 
 * **Frontend–Backend Integration via CORS** — configured origin and `withCredentials: true` to connect frontend (port 5173) with backend running on a separate port
 * **Axios Integration** — replaced Fetch with Axios for API calls; passing `withCredentials: true` and request payloads (email & password) to the login endpoint
 * **Redux Store with Redux Toolkit** — created a `userSlice` with `addUser` and `removeUser` actions; on successful login, user data from the backend is dispatched into the store
