@@ -1,11 +1,26 @@
+import axios from 'axios'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router'
+import { BASE_URL } from '../utils/constants'
 
 function Navbar() {
     const user = useSelector((store) => store.user)
     console.log(user)
     const navigate = useNavigate()
+    const handleLogout=async ()=>{
+        try{
+            const loggedOutUser=await axios.post(BASE_URL+"/logout",{
+                
+                
+
+            })
+
+        }
+        catch(err){
+            console.log(err)
+        }
+    }
     return (
         <nav className="navbar bg-blue-100/70 shadow-lg fixed top-0 left-0 w-full z-50 px-4 md:px-8">
 
@@ -56,7 +71,7 @@ function Navbar() {
                                 <a>Settings</a>
                             </li>
 
-                            <li>
+                            <li onClick={handleLogout}>
                                 <a className="text-red-500">Logout</a>
                             </li>
                         </ul>

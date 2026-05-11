@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import loginImage from "../assets/landing.svg"
+import loginImage from "../assets/login.svg"
 import axios from 'axios'
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
