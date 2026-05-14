@@ -24,7 +24,7 @@ function Navbar() {
         }
     }
     const handleNavigation = () => {
-       navigate(user?"/app/feed":"/")
+        navigate(user ? "/app/feed" : "/")
     }
     return (
         <nav className="navbar bg-blue-100/70 shadow-lg fixed top-0 left-0 w-full z-50 px-4 md:px-8">

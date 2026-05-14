@@ -9,11 +9,12 @@ import { BASE_URL } from '../utils/constants';
 function Login() {
     const [email, setEmail] = useState("aman@gmail.com");
     const [password, setPassword] = useState("amanA@123");
+    const [error, setError] = useState(false)
     const dispatch = useDispatch()
-    const navigate=useNavigate()
+    const navigate = useNavigate()
     const handleSubmit = async () => {
         try {
-            const result = await axios.post(BASE_URL+"/login", {
+            const result = await axios.post(BASE_URL + "/login", {
                 email, password
             }, {
                 withCredentials: true,
@@ -22,7 +23,7 @@ function Login() {
             navigate("/app/feed")
         }
         catch (err) {
-            console.log(err)
+            setError(err?.response?.data)
         }
 
 
@@ -92,6 +93,7 @@ function Login() {
                                 </span>
                             </div>
 
+
                             <div className="flex items-center gap-2 border border-slate-200 rounded-xl px-4 py-3 bg-slate-50 focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500 transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -105,6 +107,7 @@ function Login() {
                                     className="bg-transparent outline-none text-sm w-full text-slate-700 placeholder-slate-400"
                                 />
                             </div>
+                            {error && <span className='font-bold text-red-500'>Error:{error}</span>}
                         </div>
 
 
