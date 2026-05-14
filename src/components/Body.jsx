@@ -11,7 +11,7 @@ function Body() {
     const user = useSelector((store) => store.user)
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    if (user) return
+
     const fetchUser = async () => {
         try {
             const result = await axios.get(BASE_URL + "/profile/view", {
@@ -20,8 +20,8 @@ function Body() {
             dispatch(addUser(result.data));
         }
         catch (err) {
-            if (err.status === 401) {
-                navigate("/app/login")
+            if (err.response?.status === 401) {
+                navigate("/app/login");
             }
 
             console.error(err)
@@ -29,7 +29,10 @@ function Body() {
 
     }
     useEffect(() => {
-        fetchUser()
+        if (!user === null) {
+
+            fetchUser()
+        }
     }, [])
     return (
         <div className='bg-blue-100'>

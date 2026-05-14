@@ -1,23 +1,25 @@
 import axios from 'axios'
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router'
 import { BASE_URL } from '../utils/constants'
+import { removeUser } from '../utils/userSlice'
 
 function Navbar() {
     const user = useSelector((store) => store.user)
+    const dispatch = useDispatch()
     console.log(user)
     const navigate = useNavigate()
-    const handleLogout=async ()=>{
-        try{
-            const loggedOutUser=await axios.post(BASE_URL+"/logout",{
-                
-                
-
+    const handleLogout = async () => {
+        try {
+            const loggedOutUser = await axios.post(BASE_URL + "/logout", {}, {
+                withCredentials: true,
             })
+            dispatch(removeUser())
+            navigate("/")
 
         }
-        catch(err){
+        catch (err) {
             console.log(err)
         }
     }
@@ -48,7 +50,7 @@ function Navbar() {
                                 <img
                                     src={user?.photoUrl || "https://png.pngtree.com/png-vector/20231019/ourmid/pngtree-user-profile-avatar-png-image_10211467.png"}
                                     onError={(e) => {
-                                        e.target.onerror = null; 
+                                        e.target.onerror = null;
                                         e.target.src = "https://png.pngtree.com/png-vector/20231019/ourmid/pngtree-user-profile-avatar-png-image_10211467.png";
                                     }}
                                 />
