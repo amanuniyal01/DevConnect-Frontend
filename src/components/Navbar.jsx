@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import { BASE_URL } from '../utils/constants'
 import { removeUser } from '../utils/userSlice'
 
@@ -23,11 +23,14 @@ function Navbar() {
             console.log(err)
         }
     }
+    const handleNavigation = () => {
+       navigate(user?"/app/feed":"/")
+    }
     return (
         <nav className="navbar bg-blue-100/70 shadow-lg fixed top-0 left-0 w-full z-50 px-4 md:px-8">
 
 
-            <div onClick={() => navigate("/")} className=" cursor-pointer flex-1 ">
+            <div onClick={handleNavigation} className=" cursor-pointer flex-1 ">
                 <img
 
                     className="h-8 sm:h-10"
@@ -66,7 +69,7 @@ function Navbar() {
                             </li>
 
                             <li>
-                                <a>Profile</a>
+                                <Link to="/app/profile">Profile</Link>
                             </li>
 
                             <li>
