@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Navbar'
-import { Outlet } from 'react-router'
+import { Outlet, useNavigate } from 'react-router'
 import Footer from './Footer'
 import axios from 'axios'
 import { BASE_URL } from '../utils/constants'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addUser } from '../utils/userSlice'
 
 function Body() {
+    const user = useSelector((store) => store.user)
     const dispatch = useDispatch()
+    const navigate = useNavigate()
+    if (user) return
     const fetchUser = async () => {
         try {
             const result = await axios.get(BASE_URL + "/profile/view", {
@@ -17,10 +20,17 @@ function Body() {
             dispatch(addUser(result.data));
         }
         catch (err) {
+            if (err.status === 401) {
+                navigate("/app/login")
+            }
+
             console.error(err)
         }
 
     }
+    useEffect(() => {
+        fetchUser()
+    }, [])
     return (
         <div className='bg-blue-100'>
             <Navbar />
