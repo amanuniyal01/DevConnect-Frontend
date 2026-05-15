@@ -4,10 +4,10 @@ const feedSlice = createSlice({
     name: "feed",
     initialState: null,
     reducers: {
-        addUsers: (state, action) => {
+        addUserFeed: (state, action) => {
             return action.payload
         }
     }
 })
-export const { addUsers } = feedSlice.actions;
+export const { addUserFeed } = feedSlice.actions;
 export default feedSlice.reducer

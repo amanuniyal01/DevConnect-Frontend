@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
 
-function UserCard() {
+function UserCard({user}) {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [gender, setGender] = useState("")
@@ -9,7 +9,7 @@ function UserCard() {
     const [photoUrl, setPhotoUrl] = useState("")
     const [skills, setSkills] = useState("");
     const [age, setAge] = useState("")
-    const user = useSelector((store) => store.user)
+  
     return (
         <div>
            
