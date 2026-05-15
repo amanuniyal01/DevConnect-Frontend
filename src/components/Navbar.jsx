@@ -43,7 +43,7 @@ function Navbar() {
                 <div className="flex items-center gap-2 sm:gap-4">
 
 
-                    <div className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-blue-500 text-white font-bold">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-blue-400 text-white font-bold">
                         {user?.firstName?.charAt(0)?.toUpperCase()}
                     </div>
 
@@ -64,20 +64,20 @@ function Navbar() {
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
                         >
-                            <li className="px-2 py-1 text-sm font-semibold text-gray-500">
+                            <li className="px-2 py-1 text-sm font-bold text-gray-500">
                                 {user.firstName} {user.lastName}
                             </li>
 
                             <li>
-                                <Link to="/app/profile">Profile</Link>
+                                <Link className='font-semibold' to="/app/profile">Profile</Link>
                             </li>
 
                             <li>
-                                <a>Settings</a>
+                                <a className='font-semibold'>Settings</a>
                             </li>
 
                             <li onClick={handleLogout}>
-                                <a className="text-red-500">Logout</a>
+                                <a className="text-red-500 font-semibold">Logout</a>
                             </li>
                         </ul>
                     </div>

@@ -1,8 +1,11 @@
 import React from 'react'
+import UserCard from './UserCard'
 
 function Feed() {
     return (
-        <div className="">Feed</div>
+        <div className=" flex min-h-screen justify-center  items-center">
+            <UserCard />
+        </div>
     )
 }
 
