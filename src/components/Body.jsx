@@ -29,7 +29,7 @@ function Body() {
 
     }
     useEffect(() => {
-        if (!user === null) {
+        if (user === null) {
 
             fetchUser()
         }
